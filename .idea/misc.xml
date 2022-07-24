@@ -4,9 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Leyoo/AndroidStudioProjects/Flixster/app/src/main/res/layout-land/item_movie.xml" value="0.15211640211640212" />
+        <entry key="..\:/Users/Leyoo/AndroidStudioProjects/Flixster/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/Users/Leyoo/AndroidStudioProjects/Flixster/app/src/main/res/layout/activity_main.xml" value="0.1308876811594203" />
         <entry key="..\:/Users/Leyoo/AndroidStudioProjects/Flixster/app/src/main/res/layout/item_movie.xml" value="0.11413043478260869" />
         <entry key="..\:/Users/Leyoo/AndroidStudioProjects/Flixster/app/src/main/res/layout/popular_movie.xml" value="0.134765625" />
+        <entry key="..\:/Users/Leyoo/Downloads/Flixster/app/src/main/res/layout-land/item_movie.xml" value="0.15208333333333332" />
+        <entry key="..\:/Users/Leyoo/Downloads/Flixster/app/src/main/res/layout-land/popular_movie.xml" value="0.12478632478632479" />
+        <entry key="..\:/Users/Leyoo/Downloads/Flixster/app/src/main/res/layout-port/popular_movie.xml" value="0.1322463768115942" />
+        <entry key="..\:/Users/Leyoo/Downloads/Flixster/app/src/main/res/layout/item_movie.xml" value="0.1" />
+        <entry key="..\:/Users/Leyoo/Downloads/Flixster/app/src/main/res/layout/popular_movie.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -24,6 +25,7 @@
         android:layout_below="@+id/tvTitle"
         android:layout_marginStart="22dp"
         android:layout_marginTop="9dp"
+        android:fontFamily="sans-serif-condensed-light"
         android:layout_toEndOf="@+id/ivposter"
         tools:text='Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",' />
 
@@ -36,6 +38,9 @@
         android:layout_marginTop="13dp"
         android:layout_toEndOf="@+id/ivposter"
         android:textSize="24sp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="#018786"
+        android:textStyle="bold"
         tools:text="Doctor Strange in the Multiverse of Madness" />
 
- </RelativeLayout>
+</RelativeLayout>
