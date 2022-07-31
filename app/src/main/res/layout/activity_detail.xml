@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="movie"
+            type="com.example.flixster.models.Movie" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".DetailActivity"
+        android:orientation="vertical">
+
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/player"
+            android:transitionName="transitionTv"
+            android:layout_width="match_parent"
+            android:layout_height="210dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:textColor="#018786"
+            android:textSize="30sp"
+            android:text="@{movie.title}"
+            tools:text="Minions: The Rise of Gru" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:isIndicator="true"
+            android:numStars="10"
+            android:progressTint="#018786"
+            android:rating="@{(float)movie.rating}" />
+
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:transitionName="transOverview"
+            android:fontFamily="sans-serif-condensed-light"
+            android:layout_marginTop="5dp"
+            android:textAlignment="inherit"
+            android:textSize="14sp"
+            android:text="@{movie.overview}"
+            tools:text='A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.' />
+    </LinearLayout>
+
+</layout>

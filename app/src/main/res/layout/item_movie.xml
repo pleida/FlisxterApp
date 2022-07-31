@@ -1,49 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="movie"
+            type="com.example.flixster.models.Movie" />
+    </data>
 
-    <ImageView
-        android:id="@+id/ivposter"
-        android:layout_width="120dp"
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_marginTop="5dp">
 
-    <TextView
-        android:id="@+id/tvOverview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvTitle"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_toEndOf="@id/ivposter"
-        android:fontFamily="sans-serif-condensed-light"
-        tools:text='Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",' />
 
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginTop="13dp"
-        android:layout_toEndOf="@id/ivposter"
-        android:fontFamily="sans-serif-condensed-light"
-        android:textColor="#018786"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:text="Doctor Strange in the Multiverse of Madness" />
+        <ImageView
+            android:id="@+id/ivposter"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="3dp"
+            app:imageUrl="@{movie.posterPath}"
+            tools:srcCompat="@tools:sample/avatars" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tvOverview"
+            android:layout_width="259dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTitle"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/ivposter"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@{movie.overview}"
+            tools:text='Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.",' />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="-10dp"
+            android:layout_toEndOf="@id/ivposter"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textColor="#018786"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="@{movie.title}"
+            tools:text="Doctor Strange in the Multiverse of Madness" />
+
+
+    </RelativeLayout>
+</layout>
+
